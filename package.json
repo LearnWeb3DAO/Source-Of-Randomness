@@ -1,0 +1,28 @@
+{
+  "name": "source-of-randomness",
+  "version": "1.0.0",
+  "description": "Today we would learn how using `blockhash` and `block.timestamp` is a false source of randomness",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LearnWeb3DAO/Source-Of-Randomness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LearnWeb3DAO/Source-Of-Randomness/issues"
+  },
+  "homepage": "https://github.com/LearnWeb3DAO/Source-Of-Randomness#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.8.3"
+  }
+}
