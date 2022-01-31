@@ -181,3 +181,4 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
 ## Preventions
 
 - Don't use `blockhash` and `block.timestamp` as source of randomness
+- You can use [Chainlink VRF's](https://docs.chain.link/docs/chainlink-vrf/) for true source of randomness
