@@ -1,5 +1,7 @@
 # Source of Randomness
 
+![](https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/06/QuantumRandomness_2880x1620_Still.jpg)
+
 Randomness is a hard problem. Computers run code that is written by programmers, and follows a given sequence of steps. As such, it is extremely hard to design an algorithm that will give you a 'random' number, since that random number must be coming from an algorithm that follows a certain sequence of steps. Now, of course, some functions are better than others.
 
 In this case, we will specifically look at why you cannot trust on-chain data as sources of randomness (and also why Chainlink VRF's, that we used in Junior, were created).
@@ -188,3 +190,6 @@ For more information on `abi.encodePacked`, go ahead and read this [article](htt
 
 - Don't use `blockhash`, `block.timestamp`, or really any sort of on-chain data as sources of randomness
 - You can use [Chainlink VRF's](https://docs.chain.link/docs/chainlink-vrf/) for true source of randomness
+
+## References
+Image fetched from [Quanta Magazine](https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/06/QuantumRandomness_2880x1620_Still.jpg)
