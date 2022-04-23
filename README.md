@@ -1,6 +1,8 @@
 # Source of Randomness
 
-Today we will learn how using `blockhash` and `block.timestamp` is a false source of randomness
+Randomness is a hard problem. Computers run code that is written by programmers, and follows a given sequence of steps. As such, it is extremely hard to design an algorithm that will give you a 'random' number, since that random number must be coming from an algorithm that follows a certain sequence of steps. Now, of course, some functions are better than others.
+
+In this case, we will specifically look at why you cannot trust on-chain data as sources of randomness (and also why Chainlink VRF's, that we used in Junior, were created).
 
 ## Requirements
 
@@ -22,6 +24,12 @@ Hardhat is an Ethereum development environment and framework designed for full s
   npm init --yes
   npm install --save-dev hardhat
   ```
+  
+- If you are on Windows, please do this extra step and install these libraries as well :)
+
+  ```bash
+  npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+  ```
 
 - In the same directory where you installed Hardhat run:
 
@@ -34,15 +42,13 @@ Hardhat is an Ethereum development environment and framework designed for full s
   - Press enter for the question on if you want to add a `.gitignore`
   - Press enter for `Do you want to install this sample project's dependencies with npm (@nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers)?`
 
-Now you have a hardhat project ready to go!
+Now you have a Hardhat project ready to go!
 
-If you are not on mac, please do this extra step and install these libraries as well :)
+- Lets first understand what `abi.encodedPacked` does. 
+  
+  We have previously used `abi.encode` in the Sophomore NFT tutorial. It is a way to concatenate multiple data types into a single bytes array, which can then be converted to a string. This is used to compute the `tokenURI` of NFT collections often. `encodePacked` takes this a step further, and concatenates multiple values into a single bytes array, but also gets rid of any padding and extra values. What does this mean? Let's take `uint256` as an example. `uint256` has 256 bits in it's number. But, if the value stored is just `1`, using `abi.encode` will create a string that has 255 `0`'s and only 1 `1`. Using `abi.encodePacked` will get rid of all the extra 0's, and just concatenate the value `1`.
 
-```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
-```
-
-- Lets first understand what `abi.encodedPacked` does, For that please go ahead and read this [article](https://medium.com/@libertylocked/what-are-abi-encoding-functions-in-solidity-0-4-24-c1a90b5ddce8)
+For more information on `abi.encodePacked`, go ahead and read this [article](https://medium.com/@libertylocked/what-are-abi-encoding-functions-in-solidity-0-4-24-c1a90b5ddce8)
 
 - Create a file named as `Game.sol` inside your `contracts` folder and add the following lines of code.
 
@@ -180,5 +186,5 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
 
 ## Preventions
 
-- Don't use `blockhash` and `block.timestamp` as source of randomness
+- Don't use `blockhash`, `block.timestamp`, or really any sort of on-chain data as sources of randomness
 - You can use [Chainlink VRF's](https://docs.chain.link/docs/chainlink-vrf/) for true source of randomness
