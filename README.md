@@ -181,7 +181,7 @@ For more information on `abi.encodePacked`, go ahead and read this [article](htt
 - Now open up a terminal pointing to `Source-of-Randomness` folder and execute this
 
   ```bash
-  npx hardhat compile
+  npx hardhat test
   ```
 
 - If all your tests passed, you have sucessfully completed the hack :)
