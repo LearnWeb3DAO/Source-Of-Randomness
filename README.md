@@ -74,7 +74,7 @@ For more information on `abi.encodePacked`, go ahead and read this [article](htt
         }
 
         /**
-            It begins the game by first choosing a ramdom number by calling `pickACard`
+            It begins the game by first choosing a random number by calling `pickACard`
             It then verifies if the random number selected is equal to `_guess` passed by the player
             If the player guessed the correct number, it sends the player `0.1 ether`
         */
