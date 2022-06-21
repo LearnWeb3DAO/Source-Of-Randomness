@@ -6,6 +6,8 @@ Randomness is a hard problem. Computers run code that is written by programmers,
 
 In this case, we will specifically look at why you cannot trust on-chain data as sources of randomness (and also why Chainlink VRF's, that we used in Junior, were created).
 
+<Quiz questionId="22b00580-fe70-4209-bcd7-73fd335ae90a" />
+
 ## Requirements
 
 - We will build a game where there is a pack of cards.
@@ -143,6 +145,8 @@ For more information on `abi.encodePacked`, go ahead and read this [article](htt
   - `guess` then sends the `Attack.sol` `0.1 ether` and the game ends
   - Attacker is successfully able to guess the random number
 
+<Quiz questionId="4398fb9d-e52b-431e-9688-140e9b325e0f" />
+
 - Now lets write some tests to verify if it works exactly as we hoped.
 
 - Create a new file named `attack.js` inside the `test` folder and add the following lines of code
@@ -186,10 +190,17 @@ For more information on `abi.encodePacked`, go ahead and read this [article](htt
 
 - If all your tests passed, you have sucessfully completed the hack :)
 
+<Quiz questionId="94e27fa6-a537-42c9-8bd1-6afbd30d51c0" />
+<Quiz questionId="73b3c3b1-8f21-4eb6-8f40-063a509f87b9" />
+
 ## Preventions
 
 - Don't use `blockhash`, `block.timestamp`, or really any sort of on-chain data as sources of randomness
 - You can use [Chainlink VRF's](https://docs.chain.link/docs/chainlink-vrf/) for true source of randomness
 
+<Quiz questionId="6fdad269-f07b-4284-94b0-40cb822f98db" />
+
 ## References
 Image fetched from [Quanta Magazine](https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/06/QuantumRandomness_2880x1620_Still.jpg)
+
+<SubmitQuiz />
