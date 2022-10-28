@@ -22,7 +22,7 @@ In this case, we will specifically look at why you cannot trust on-chain data as
 To build the smart contract we will be using [Hardhat](https://hardhat.org/).
 Hardhat is an Ethereum development environment and framework designed for full stack development in Solidity. In simple words you can write your smart contract, deploy them, run tests, and debug your code.
 
-- In you folder, you will set up a Hardhat project
+- In your folder, you will set up a Hardhat project
 
   ```bash
   npm init --yes
